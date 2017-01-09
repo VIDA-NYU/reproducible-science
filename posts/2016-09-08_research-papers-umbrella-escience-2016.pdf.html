@@ -1,0 +1,24 @@
+<!--
+.. title: Conducting Reproducible Research with Umbrella: Tracking, Creating, and Preserving Execution Environments
+.. slug: conducting-repro-research-umbrella
+.. date: 2016-09-08 01:09:00
+.. link: http://ccl.cse.nd.edu/research/papers/umbrella-escience-2016.pdf
+.. tags: reproducibility infrastructure
+.. description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<p>Publishing scientific results without the detailed execution environments describing how the results were collected makes it difficult or even impossible for the reader to reproduce thework. However, the configurations of the execution environ-ments are too complex to be described easily by authors. To solve this problem, we propose a framework facilitating the conduct of reproducible research by tracking, creating, and preserving the comprehensive execution environments with Umbrella. The framework includes a lightweight, persistent anddeployable execution environment specification, an execution engine which creates the specified execution environments, and an archiver which archives an execution environment into persistent storage services like Amazon S3 and Open Science Framework (OSF). The execution engine utilizes sandbox techniques like virtual machines (VMs), Linux containers and user-space tracers, to cre-ate an execution environment, and allows common dependencies like base OS images to be shared by sandboxes for different applications. We evaluate our framework by utilizing it to reproduce three scientific applications from epidemiology, scene rendering, and high energy physics. We evaluate the time and space overhead of reproducing these applications, and the effectiveness of the chosen archive unit and mounting mechanism for allowing different applications to share dependencies. Our results show that these applications can be reproduced using different sandbox techniques successfully and efficiently, even through the overhead andperformance slightly vary.</p>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
