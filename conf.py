@@ -847,7 +847,8 @@ FEED_LINKS_APPEND_QUERY = False
 LICENSE = ""
 # I recommend using the Creative Commons' wizard:
 # https://creativecommons.org/choose/
-LICENSE = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
+LICENSE = "<a rel='license' href='https://creativecommons.org/licenses/by-nc-sa/4.0/'><img alt='Creative Commons License BY-NC-SA'style='border-width:0; margin-bottom:12px;' src='https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png'></a>"
+
 # <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
 # <img alt="Creative Commons License BY-NC-SA"
 # style="border-width:0; margin-bottom:12px;"
@@ -855,7 +856,7 @@ LICENSE = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Internation
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents; {date} <a href="mailto:{email}">{author}</a> - {license}'
+CONTENT_FOOTER = '{date} <a href="mailto:{email}">{author}</a> - Reproducible Science is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
