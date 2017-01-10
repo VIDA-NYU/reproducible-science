@@ -2,9 +2,32 @@ body {
   margin: 0;
   padding-top:20px;
 }
-a {
+
+body p {
+  font-size:1.1em;
+}
+
+body a {
   color: black;
 }
+
+/* --------------------Footer Links--------------------------*/
+#footer a {
+  text-decoration: underline;
+}
+
+/* --------------------Page Header Tweaks--------------------------*/
+
+.logo-header img {
+  float: left;
+}
+
+.page-header h1{
+  display:inline-block;
+  margin-left: 10px;
+  vertical-align: center;
+}
+
 
 /* --------------------Index Page for Directory Color Changes--------------------------*/
 .entry-title a {
@@ -16,25 +39,10 @@ a {
   text-decoration: underline;
 }
 
-/* --------------------Footer Links--------------------------*/
-#footer a {
-  text-decoration: underline;
-}
-
-/* --------------------Page Header Tweaks--------------------------*/
-
-.logo-header img {
-	float: left;
-  vertical-align: none;
-}
-
-.page-header{
-  display: inline-block;
-}
-
 /* --------------------TAGS--------------------------*/
 #index-tags {
   text-align:left;
+  font-size:1.1em;
 }
 
 #index-tags li {
@@ -43,16 +51,18 @@ a {
 
 #index-tags li a {
   font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-  font-size: 15px;
   font-weight: normal;
   color:#373737;
+  font-size:1.5em;
   text-decoration: underline;
 }
+
 
 /* --------------------NAV BAR--------------------------*/
 .navbar-inverse {
   background-color: #57068c;
   border-color: transparent;
+  font-size:1.3em;
 }
 .navbar-inverse .navbar-brand {
   color: #ffffff;

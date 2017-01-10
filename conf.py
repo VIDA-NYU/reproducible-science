@@ -136,9 +136,14 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/who-we-are", "Who We Are"),
         ("/directory", "Reproducible Resource Directory"),
-        ("https://reproduciblescience.org/nyu/", "Reproducibility @ NYU"),
-        ("http://escience.washington.edu/about-us/working-groups/reproducibility-and-open-science/", "Reproducibility @ UW"),
-        ("http://bids.berkeley.edu/working-groups/reproducibility-and-open-science", "Reproducibility @ BIDS"),
+	(
+          (
+              ("https://reproduciblescience.org/nyu/", "Reproducibility @ NYU"),
+              ("http://escience.washington.edu/about-us/working-groups/reproducibility-and-open-science/", "Reproducibility @ UW"),
+              ("http://bids.berkeley.edu/working-groups/reproducibility-and-open-science", "Reproducibility @ BIDS"),
+          ),
+          'Reproducibility Initiatives'
+        )
     ),
 }
 
