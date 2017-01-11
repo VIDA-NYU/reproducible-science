@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding-top:20px;
 }
 
 body p {
@@ -25,6 +24,17 @@ body a {
 .page-header h1{
   display:inline-block;
   margin-left: 10px;
+}
+
+.page-header small{
+    color: #dddddd;
+}
+
+.page-header{
+  background-color: #57068c;
+  color: #ffffff;
+  padding-top: 0px;
+  text-align: center;
 }
 
 
@@ -56,7 +66,6 @@ body a {
   text-decoration: underline;
 }
 
-
 /* --------------------NAV BAR--------------------------*/
 .navbar-inverse {
   background-color: #57068c;
@@ -76,6 +85,7 @@ body a {
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #ffffff;
+  vertical-align: center;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
