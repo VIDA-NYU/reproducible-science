@@ -1,0 +1,12 @@
+language: python
+python: "3.5"
+# command to install dependencies
+install: pip install 'Nikola[extras]'
+# command to run tests
+script: nikola build
+after_success: |
+  [ $TRAVIS_BRANCH = master ] &&
+  [ $TRAVIS_PULL_REQUEST = false ] &&
+  pip install ghp-import &&
+  ghp-import -n output
+  git push -qf https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
