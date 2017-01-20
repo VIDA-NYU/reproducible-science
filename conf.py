@@ -239,7 +239,7 @@ JS_DATE_FORMAT = 'DD:MM:YYYY'
 # One or more folders containing files to be copied as-is into the output.
 # The format is a dictionary of {source: relative destination}.
 # Default is:
-# FILES_FOLDERS = {'files': ''}
+FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
 
 # One or more folders containing code listings to be processed and published on
@@ -805,10 +805,10 @@ IMAGE_FOLDERS = {'images': 'images'}
 # FAVICONS contains (name, file, size) tuples.
 # Used to create favicon link like this:
 # <link rel="name" href="file" sizes="size"/>
-#FAVICONS = (
-# ("icon", "images/reproduce.ico", "16x16"),
-# ("icon", "images/reproduce_128x128.ico", "128x128"),
-# )
+FAVICONS = (
+     ("favicon", "/favicon.ico", "16x16"),
+     ("favicon1", "icon_128x128.png", "128x128"),
+)
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
 # INDEX_TEASERS = False
