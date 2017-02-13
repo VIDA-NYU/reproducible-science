@@ -136,7 +136,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/", "Home"),
         ("/who-we-are", "Who We Are"),
-        ("/directory", "Reproducible Resource Directory"),
+        ("/directory", "Resource Directory"),
     ),
 }
 
