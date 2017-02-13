@@ -136,7 +136,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/", "Home"),
         ("/who-we-are", "Who We Are"),
-        ("/directory", "Reproducible Resource Directory"),
+        ("/directory", "Resource Directory"),
     ),
 }
 
@@ -175,9 +175,9 @@ THEME_COLOR = '#5670d4'
 #
 
 POSTS = (
-    ("posts/*.rst", "directory", "post.tmpl"),
-    ("posts/*.txt", "directory", "post.tmpl"),
-    ("posts/*.html", "directory", "post.tmpl"),
+    ("posts/directory/*.rst", "directory", "post.tmpl"),
+    ("posts/directory/*.txt", "directory", "post.tmpl"),
+    ("posts/directory/*.html", "directory", "post.tmpl"),
 )
 
 PAGES = (
@@ -842,7 +842,6 @@ FEED_LINKS_APPEND_QUERY = False
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
-LICENSE = ""
 # I recommend using the Creative Commons' wizard:
 # https://creativecommons.org/choose/
 LICENSE = "<a rel='license' href='https://creativecommons.org/licenses/by-nc-sa/4.0/'><img alt='Creative Commons License BY-NC-SA'style='border-width:0; margin-bottom:12px;' src='https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png'></a>"
@@ -854,7 +853,7 @@ LICENSE = "<a rel='license' href='https://creativecommons.org/licenses/by-nc-sa/
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = '{date} <a href="mailto:{email}">{author}</a> - Reproducible Science is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License {license}'
+CONTENT_FOOTER = '{date} <a href="mailto:{email}">{author}</a> - Reproducible Science is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License<br/>{license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
