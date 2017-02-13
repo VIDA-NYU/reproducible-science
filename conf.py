@@ -175,9 +175,9 @@ THEME_COLOR = '#5670d4'
 #
 
 POSTS = (
-    ("posts/*.rst", "directory", "post.tmpl"),
-    ("posts/*.txt", "directory", "post.tmpl"),
-    ("posts/*.html", "directory", "post.tmpl"),
+    ("posts/directory/*.rst", "directory", "post.tmpl"),
+    ("posts/directory/*.txt", "directory", "post.tmpl"),
+    ("posts/directory/*.html", "directory", "post.tmpl"),
 )
 
 PAGES = (
