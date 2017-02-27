@@ -807,7 +807,6 @@ IMAGE_FOLDERS = {'images': 'images'}
 # <link rel="name" href="file" sizes="size"/>
 FAVICONS = (
      ("favicon", "favicon.ico", "16x16"),
-     ("favicon1", "icon_128x128.png", "128x128"),
 )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
