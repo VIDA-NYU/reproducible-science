@@ -1,9 +1,12 @@
 language: python
 python: "3.5"
 # command to install dependencies
-install: pip install 'Nikola[extras]'
+install: pip install 'Nikola[extras]' requests PyYAML
 # command to run tests
-script: nikola build
+script:
+  - mkdir -p posts/directory && rm -f posts/directory/*
+  - ./import_rss.py
+  - nikola build
 after_success: |
   [ $TRAVIS_BRANCH = master ] &&
   [ $TRAVIS_PULL_REQUEST = false ] &&
