@@ -1,0 +1,59 @@
+<!--
+.. title: How to Contribute
+.. slug: contribute
+.. date: 2018-06-19 14:24:09 UTC-05:00
+.. type: text
+-->
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+		<p>The <a href="/directory/">directory</a> on this website is built from an RSS feed made entirely using GitHub and Travis CI (<a href="https://github.com/vida-nyu/reproducibility-news">repo</a>). Contributions to the <a href="https://vida-nyu.github.io/reproducibility-news/feed.rss">reproducibility-news feed</a> will be tweeted out via the <a href="https://twitter.com/ReproFeed">@ReproFeed</a> twitter bot and added to the directory on this site. So, the best way to contribute is to add content to the reproducibility-news RSS feed!</p>
+
+		<h2>Best Practices for Contributing</h2>
+		<ul>
+			<li>Make sure that the resource you are suggesting isn&#39;t already in the feed.</li>
+			<li>Make sure the resource you are suggesting is open access. This means that anyone should be able to access, read, and/or download it without having to pay money or login.</li>
+			<li>Be sure to add at least one tag to the resource. You can find a list of tags in the <a href="https://github.com/ViDA-NYU/reproducibility-news#rss-tags">README file of the reproducibility-news GitHub repository</a>.</li>
+		</ul>
+
+		<h2>Workflow</h2>
+			<p>If you&#39;d like to contribute, then you need to edit the <a href="https://github.com/ViDA-NYU/reproducibility-news/blob/master/news.yaml"><code>news.yaml</code></a> file in the reproducibility-news GitHub repository. Use this link to go to directly edit the file: <a href="https://github.com/ViDA-NYU/reproducibility-news/edit/master/news.yaml">https://github.com/ViDA-NYU/reproducibility-news/edit/master/news.yaml</a>. If you click that, GitHub will ask you to fork the repository to make changes to the file like so:</p>
+
+			<p><img src="/images/workflow.png" alt="Fork the repo"></p>
+
+			<p>Afterward, you&#39;ll be redirected to directly edit the file (in a repository in your account). Edit the <code>news.yaml</code> file by adding this template at the top of the file:</p>
+
+<pre><code>
+---
+title: |
+  Some meaningful title here (will be tweeted out) - make sure there are two spaces to indent this line!
+link: link to the original article or publication
+date: 2018-01-21 00:00:00
+tags: [reproducibility talk, reproducible paper]
+description: |
+  Multi-line description here. Will show up in RSS readers.
+  Like the title field, be careful not to forget the indentation (2 spaces).
+</code></pre>
+
+  	<p><img src="/images/workflow1.png" alt="Edit the yaml file"></p>
+
+  	<p>You should at least change the title, date (when the resource was created), tags (you must have one, but can have many separated by a comma in the square brackets), and a brief description. The description can be multi-line or one line. </p>
+
+		<p>Please make sure you that you have two lines between the description of the current entry and the title of the next entry. After you are finished, at the bottom of the web page you should see a space to add a descriptive message about your changes, and a button that says &#39;Propose file change&#39;. After you write your concise, descriptive message about your changes, click that button!</p>
+
+		<p><img src="/images/workflow2.png" alt="Describe your change"></p>
+
+		<p>This will initiate a pull request -- meaning, you'll be asking us to integrate your resource into the canonical feed. All you need to do is click the &#39;Create pull request&#39; button:
+
+		<p><img src="/images/workflow3.png" alt="Describe your change"></p>
+
+		<p>And you'll be asked to add a bit more description and rename the title of the pull request (all optional but recommended). Please make sure you check &#39;Allow edits from maintainers&#39; before you submit your pull request.</p>
+
+		<p><img src="/images/workflow4.png" alt="Describe your change"></p>
+
+		<p>We will do our best to get to your pull request in as timely a manner as possible. And a preemptive thank you for helping us grow this community resource!</p>
+
+  </body>
+</html>

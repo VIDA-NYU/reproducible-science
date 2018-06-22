@@ -5,21 +5,28 @@
 <%namespace name="feeds_translations" file="feeds_translations_helper.tmpl" import="*"/>
 <%inherit file="base.tmpl"/>
 
-<%block name="extra_head">
-    ${parent.extra_head()}
-    % if posts and (permalink == '/' or permalink == '/' + index_file):
-        <link rel="prefetch" href="${posts[0].permalink()}" type="text/html">
-    % endif
-    ${math.math_styles_ifposts(posts)}
-</%block>
-
 <%block name="content">
+
 <%block name="content_header">
-    ${feeds_translations.translation_link(kind)}
+    <header>
+        <h1>${title|h}</h1>
+        %if description:
+        <p>${description}</p>
+        %endif
+        %if subcategories:
+        ${messages('Subcategories:')}
+        <ul>
+            %for name, link in subcategories:
+            <li><a href="${link}">${name|h}</a></li>
+            %endfor
+        </ul>
+        %endif
+        <div class="metadata">
+            ${feeds_translations.feed_link(tag, kind)}
+            ${feeds_translations.translation_link(kind)}
+        </div>
+    </header>
 </%block>
-% if 'main_index' in pagekind:
-    ${front_index_header}
-% endif
 
 % for post in posts:
     <article class="h-entry post-${post.meta('type')}" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -41,16 +48,6 @@
     <div class="e-content entry-content">
     ${post.text(teaser_only=False)}
     %endif
-    % if post.tags:
-		<div id="index-tags">
-		  <ul class="tags">
-			Tagged:
-		  %for tag in post.tags:
-		  	<li class="tag"><a href="${_link('tag', tag, lang)}">${tag}</a></li>          
-		  %endfor
-		  </ul>
-		</div>
-    % endif
     </div>
     </article>
 % endfor
