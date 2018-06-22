@@ -2,4 +2,4 @@
 
 # reproducible-science
 
-Nikola version of https://reproduciblescience.org
+Source of the https://reproduciblescience.org website, built using Nikola.
