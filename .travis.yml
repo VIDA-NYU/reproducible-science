@@ -1,7 +1,7 @@
 language: python
 python: "3.5"
 # command to install dependencies
-install: pip install 'Nikola[extras]' requests PyYAML
+install: pip install 'Nikola[extras]' requests PyYAML webassets
 install: pip install -U --upgrade-strategy=eager Nikola==8.0.0b2
 # command to run tests
 script:
