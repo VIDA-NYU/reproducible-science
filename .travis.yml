@@ -3,18 +3,17 @@ python: "3.5"
 # command to install dependencies
 install: pip install -U --upgrade-strategy=eager Nikola==8.0.0b2 requests PyYAML webassets
 # command to run tests
-script:
-  - mkdir -p posts/directory && rm -f posts/directory/*
-  - ./import_rss.py
-  - nikola build
-after_success: |
-  [ $TRAVIS_BRANCH = master ] &&
-  [ $TRAVIS_PULL_REQUEST = false ] &&
-  virtualenv -p python2.7 /tmp/venv &&
-  . /tmp/venv/bin/activate &&
-  pip install ghp-import &&
-  ghp-import -n output &&
-  git push -qf https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
+script: |
+  mkdir -p posts/directory && rm -f posts/directory/* &&
+  ./import_rss.py &&
+  nikola build &&
+  if [ $TRAVIS_BRANCH = master ] && [ $TRAVIS_PULL_REQUEST = false ]; then
+    virtualenv -p python2.7 /tmp/venv &&
+    . /tmp/venv/bin/activate &&
+    pip install ghp-import &&
+    ghp-import -n output &&
+    git push -qf https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
+  fi
 notifications:
   email:
     recipients:
