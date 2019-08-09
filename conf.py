@@ -68,11 +68,11 @@ NAVIGATION_LINKS = {
 # (Bootstrap 4: right-side of navbar, Bootblog 4: right side of title)
 NAVIGATION_ALT_LINKS = {
     DEFAULT_LANG: {
-    	("https://twitter.com/ReproFeed", "<i class='fab fa-twitter'></i>"),
-    	
-    	("https://vida-nyu.github.io/reproducibility-news/feed.rss", "<i class='fas fa-rss'></i>"),
-    
-    	("https://github.com/vida-nyu/reproducible-science", "<i class='fab fa-github'></i>"),
+    	("https://twitter.com/ReproFeed", "<i class='fab fa-twitter'></i> <span class=\"d-lg-none\">Twitter</span>"),
+
+    	("https://vida-nyu.github.io/reproducibility-news/feed.rss", "<i class='fas fa-rss'></i> <span class=\"d-lg-none\">RSS</span>"),
+
+    	("https://github.com/vida-nyu/reproducible-science", "<i class='fab fa-github'></i> <span class=\"d-lg-none\">GitHub</span>"),
     }
 }
 
