@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.5'
+      - name: Install dependencies
+        run: pip install -U --upgrade-strategy=eager Nikola==8.0.0b2 requests PyYAML webassets
+      - name: Run plugin publication_list
+        run: nikola plugin -i publication_list
+      - name: Run nikola build
+        run: |
+          mkdir -p posts/directory && rm -f posts/directory/* && \
+          ./import_rss.py && \
+          nikola build
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'output'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
